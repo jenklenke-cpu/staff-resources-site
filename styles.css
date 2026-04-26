@@ -1,0 +1,188 @@
+/* General page styling */
+body {
+  font-family: "Lora", Garamond, serif;
+  background: white;
+  color: #07000c;
+  padding: 48px;
+}
+
+/* Sticky header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #467aab;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+/* Navigation menu */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #928e95;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #ffffff;
+  color: #07000c;
+}
+
+/* Main content centered with flexbox */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+/* Section styling */
+.welcome-section,
+.links-section {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2,
+.links-section h2 {
+  margin-top: 0;
+  color: #1f4e79;
+}
+
+/* Image styling */
+.welcome-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto 0;
+  border-radius: 8px;
+}
+
+/* Quick links list */
+.links-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links-section li {
+  margin-bottom: 0.75rem;
+}
+
+.links-section a {
+  color: #1f4e79;
+  text-decoration: none;
+}
+
+.links-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: #467aab;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  /* Stack navigation vertically */
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  /* Adjust main content spacing */
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Make sections full width */
+  .welcome-section,
+  .links-section {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Make images scale nicely */
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Accordion */
+.accordion {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  text-align: left;
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accordion::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+}
+
+.accordion.active::after {
+  content: "−";
+}
+
+.accordion:hover {
+  background-color: #e5e5e5;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  background-color: #ffffff;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
